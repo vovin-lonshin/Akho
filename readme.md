@@ -1,11 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Akho: Daemon Sigil/Akho Circuit Design application
+
+This is a application for designing and sharing 
+[*Akho Circuit*]
+by [Vovin Lonshin] (https://www.facebook.com/FrM.E.93).
+
+
 
 Things you may want to cover:
 
 * Ruby version
+  1.9.3
 
 * System dependencies
 
@@ -21,8 +27,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
