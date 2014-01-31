@@ -4,11 +4,10 @@
 
 This is a application for designing and sharing 
 [*Akho Circuit*]
-by [Vovin Lonshin] (https://www.facebook.com/FrM.E.93).
+by [Vovin Lonshin] (vovin.lonshin@gmail.com).
 
 
 
-Things you may want to cover:
 
 * Ruby version
   1.9.3
