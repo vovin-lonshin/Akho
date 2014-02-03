@@ -3,7 +3,7 @@
 # Akho: Daemon Sigil/Akho Circuit Design application
 
 This is a application for designing and sharing 
-[*Akho Circuit*]
+[*Akho Circuit*] (http://akho.herokuapp.com/)
 by [Vovin Lonshin] (vovin.lonshin@gmail.com).
 
 
