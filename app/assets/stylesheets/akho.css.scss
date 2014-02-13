@@ -1,0 +1,39 @@
+/* desire */
+
+@font-face {
+    font-family: 'AkhoDesireDesire';
+    src: font-url('akhodesire.eot');
+    src: font-url('akhodesire.eot') format('embedded-opentype'),
+         font-url('akhodesire.woff') format('woff'),
+         font-url('akhodesire.ttf') format('truetype'),
+         font-url('akhodesire.svg#AkhoDesireDesire') format('svg');
+         }
+ @font-face {        
+    font-family: 'AkhoWillRegular';
+    src: font-url('akhowill.eot');
+    src: font-url('akhowill.eot') format('embedded-opentype'),
+         font-url('akhowill.woff') format('woff'),
+         font-url('akhowill.ttf') format('truetype'),
+         font-url('akhowill.svg#AkhoWillRegular') format('svg');
+         }
+@font-face {         
+    font-family: 'AkhoBelieveBelief';
+    src: font-url('akhobelief.eot');
+    src: font-url('akhobelief.eot') format('embedded-opentype'),
+         font-url('akhobelief.woff') format('woff'),
+         font-url('akhobelief.ttf') format('truetype'),
+         font-url('akhobelief.svg#AkhoBelieveBelief') format('svg');
+         }
+
+
+desire{
+ font-family: 'AkhoDesireDesire'
+}
+
+belief{
+font-family: 'AkhoBelieveBelief';
+}
+
+will{
+font-family: 'AkhoWillRegular';
+}
