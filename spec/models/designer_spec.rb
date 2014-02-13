@@ -9,6 +9,7 @@ describe Designer do
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
+  it { should respond_to(:daemons)}
   
     it { should be_valid }
   
@@ -40,7 +41,7 @@ end
   describe "when email address is already taken" do
     before do
       designer_with_same_email = @designer.dup
-      designer_with_same_email.email = designer.email.upcase
+      designer_with_same_email.email = @designer.email.upcase
       designer_with_same_email.save
     end
 

@@ -1,5 +1,6 @@
 Akho::Application.routes.draw do
    
+  get "daemons/new"
   get "designers/new"
   root  'static_pages#home'
   
