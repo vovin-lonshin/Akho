@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210090619) do
+ActiveRecord::Schema.define(version: 20140215080955) do
+
+  create_table "circiuts", force: true do |t|
+    t.string   "url"
+    t.integer  "designer_id"
+    t.integer  "daemon_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "circiuts", ["designer_id", "created_at", "daemon_id"], name: "index_circiuts_on_designer_id_and_created_at_and_daemon_id"
 
   create_table "daemons", force: true do |t|
     t.string   "name"
