@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
  
   
   def home
+    reload!
     get_rand_circiut
   end
 
@@ -17,9 +18,10 @@ class StaticPagesController < ApplicationController
   image_path=Rails.root.join("app", "assets", "images")+"site"
   url= File.expand_path("../circiut.svg",image_path)
   style_path=Rails.root.join("app", "assets", "stylesheet")
-  # style_url= File.expand_path("../application.css",style_path)
-  # style_url= "http://localhost:3000/assets/application.css"
-  style_url= "http://#{request.host}:#{request.port}/assets/application.css"
+
+   style_url= "http://#{request.host}:#{request.port}/assets/application.css"
+
+  
   family="desire will belief"
   family=family.split
   
