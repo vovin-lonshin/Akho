@@ -1,5 +1,5 @@
 
-
+<% provide(:title, @circiut_title) %>
 
 
 <div class="center">
@@ -7,7 +7,8 @@
  
 
 
-<%= image_tag("circiut.svg", :size => "333X333", :border => 10) %> 
+<p><%= yield( :title) %>  </p>
+<%= render :inline => @RandomCirciut %>
 
 <br>
 
@@ -16,6 +17,7 @@
 
 
 
-Build on:<br>
-<%= link_to image_tag("site/rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
+
+
 

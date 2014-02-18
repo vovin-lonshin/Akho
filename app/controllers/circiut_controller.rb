@@ -1,0 +1,4 @@
+class CirciutController < ApplicationController
+
+  
+end
