@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140215080955) do
 
-  create_table "circiuts", force: true do |t|
+  create_table "circuits", force: true do |t|
     t.string   "url"
     t.integer  "designer_id"
     t.integer  "daemon_id"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140215080955) do
     t.datetime "updated_at"
   end
 
-  add_index "circiuts", ["designer_id", "created_at", "daemon_id"], name: "index_circiuts_on_designer_id_and_created_at_and_daemon_id"
+  add_index "circuits", ["designer_id", "created_at", "daemon_id"], name: "index_circuits_on_designer_id_and_created_at_and_daemon_id"
 
   create_table "daemons", force: true do |t|
     t.string   "name"

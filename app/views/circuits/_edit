@@ -1,0 +1,24 @@
+
+<div style="font-size: 42pt">
+<%= form_tag({controller:"circuits",action: "form"},method:"get", class:"form-inline") do %>
+<%  if params[:name].nil? || params[:name].empty?
+      name= "Akho Code"
+    else
+      name=  params[:name] 
+    end
+    
+    name=name.upcase.scan(/[A-Z]/).join.scan(/[^U]/).join.split(//)
+    family="desire will belief".split %>
+    
+    <% (0..family.length-1).each do |f| %>
+    <div class= <%= puts"#{family[f]}"%> >
+      <%= label_tag "#{family[f]}:", nil, style: "font-size: 23pt" %>
+      <% (0..name.length-1).each do |n| %>
+       
+        <%= radio_button_tag "#{n}_#{family[f]}", "#{name[n]}" %>
+         <%= label_tag "#{name[n]}", nil, class: "#{family[f]}", style: "font-size: 23pt" %>
+      <% end %>
+     </div> 
+     <% end %>
+   <% end %>
+</div>

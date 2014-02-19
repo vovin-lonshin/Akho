@@ -9,6 +9,9 @@ Akho::Application.routes.draw do
     match '/help',    to: 'static_pages#help',    via: 'get'
     match '/about',   to: 'static_pages#about',   via: 'get'
     match '/contact', to: 'static_pages#contact', via: 'get'
+    match '/circuit/form', to: 'circuits#form', via: 'get'
+    match '/circuit', to: 'circuits#blank', via: 'get'
+    match '/circuit/random', to: 'circuits#random', via: 'get'
     match '/signup', to: 'designers#new', via: 'get'
  
   

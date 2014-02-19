@@ -1,0 +1,15 @@
+
+
+<br>
+<div class="center">
+  <h1>Circuits<h1>
+  <%= render partial: "circuits/action", locals: { action: @circuits } %>
+ 
+
+  <h4><%= yield( :title) %></h4>
+
+  <%= render partial: "circuits/random", locals: { random: @circuits } %>
+
+
+<br>
+</div>

@@ -2,9 +2,9 @@ class StaticPagesController < ApplicationController
    before_filter :set_cache_buster, only: [:home]
   
   def home
-    circiut_name="A Circiut"
-    get_rand_circiut(circiut_name)
-    @circiut_title="[Random Circiut]:::#{circiut_name}:::"
+    circuit_name="A circuit"
+    get_rand_circuit(circuit_name)
+    @circuit_title="[Random circuit]:::#{circuit_name}:::"
   end
 
   def help

@@ -1,0 +1,26 @@
+
+<br>
+<div class="center">
+  <h1>Circuits<h1>
+  <%= render partial: "circuits/action", locals: { action: @circuits } %>
+    
+    <% test= @circuit_title.partition(":::")%>
+    <% case test[0]  %>
+     <% when "[Random circuit]"   %>
+       <h4><%= yield( :title) %></h4>
+      <%= render partial: "circuits/random", locals: { random: @circuits } %>
+
+    <% when "[BLANK Circuit]"  %>  
+         <h4><%= yield( :title) %></h4>
+         <%= render :inline => @BlankCircuit %>
+
+     <%  when "[Circuit to Edit]"  %> 
+      <%= render partial: "circuits/edit", locals: { edit: @circuits } %> 
+       <h4><%= yield( :title) %></h4>
+      <%= render partial: "circuits/random", locals: { random: @circuits } %>
+
+   <% else %>
+     <%= yield("Something went wrong") %>
+   <% end %>
+<br>
+</div>

@@ -1,5 +1,5 @@
 
-<% provide(:title, @circiut_title) %>
+
 
 
 <div class="center">
@@ -7,8 +7,7 @@
  
 
 
-<p><%= yield( :title) %>  </p>
-<%= render :inline => @RandomCirciut %>
+<%= render partial: "circuits/random", locals: { random: @circuits } %>
 
 <br>
 

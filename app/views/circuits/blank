@@ -1,0 +1,17 @@
+<% provide(:title, @circuit_title) %>
+
+<br>
+<div class="center">
+  <h1>Circuits<h1>
+  <%= render partial: "circuits/action", locals: { action: @circuits } %>
+ 
+<% if @circuit_title.include? "[BLANK Circuit]" %>
+  <h4><%= yield( :title) %></h4>
+  <%= render :inline => @BlankCircuit %>
+<% else %>
+  <h4><%= yield( :title) %></h4>
+  <%= render partial: "circuits/random", locals: { random: @circuits } %>
+<% end %>
+
+<br>
+</div>
