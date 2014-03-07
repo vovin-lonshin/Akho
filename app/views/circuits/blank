@@ -7,7 +7,7 @@
  
 <% if @circuit_title.include? "[BLANK Circuit]" %>
   <h4><%= yield( :title) %></h4>
-  <%= render :inline => @BlankCircuit %>
+  <%= render :inline => @Circuit %>
 <% else %>
   <h4><%= yield( :title) %></h4>
   <%= render partial: "circuits/random", locals: { random: @circuits } %>

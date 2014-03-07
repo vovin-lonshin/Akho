@@ -15,7 +15,7 @@
       <%= label_tag "#{family[f]}:", nil, style: "font-size: 23pt" %>
       <% (0..name.length-1).each do |n| %>
        
-        <%= radio_button_tag "#{n}_#{family[f]}", "#{name[n]}" %>
+        <%= radio_button_tag "name#{n}", "#{family[f]}" %>
          <%= label_tag "#{name[n]}", nil, class: "#{family[f]}", style: "font-size: 23pt" %>
       <% end %>
      </div> 

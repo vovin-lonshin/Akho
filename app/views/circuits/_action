@@ -1,8 +1,0 @@
-
-
-<%= form_tag({controller:"circuits",action: "form"},method:"get", class:"form-inline") do %>
-<%= submit_tag "DO:", class: "btn" %>
-   <%= select_tag :do_action, options_for_select([ "random", "edit","blank" ],"random") %>
-   <%= text_field_tag(:name, nil, placeholder: 'ON [Enter NAME.]..',  class: "input-large") %>
-<% end %>
-
