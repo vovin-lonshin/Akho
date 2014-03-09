@@ -12,6 +12,8 @@ gem 'rasem', '0.6.0', :git => 'https://github.com/vovin-lonshin/rasem'
 # gem "ruby-batik", "~> 0.0.3"
 gem 'rmagick', '2.13.2'
 
+gem "thin", '1.6.2'
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'

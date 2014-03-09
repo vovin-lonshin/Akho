@@ -1,3 +1,3 @@
-<%= form_tag({controller:"circuits",action: "download"},method:"post", class:"form-inline") do %>
+<%= form_tag({controller:"circuits",action: "download", data: @circuit_file },method:"post", class:"form-inline") do %>
 <%= submit_tag "Download", class: "btn" %>
    <% end %>

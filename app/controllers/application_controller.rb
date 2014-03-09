@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   require 'RMagick'
+  require 'base64'
+
   
   # Create a random circuit
   
@@ -52,13 +54,23 @@ class ApplicationController < ActionController::Base
               gc.draw(i)
             
            end
+           
+           
         @Circuit=i.flatten_images
         @Circuit.format = 'png'
-        # send_data @Circuit.to_blob ,type: "image/png" , disposition: "inline"
-         require 'base64'
+        
+         
+         @circuit_file = "#{Rails.root}/tmp/circuit-#{name.join}-#{Time.now.to_i}-#{Process.pid}.png"
+         
+         
+          @Circuit.write('png:'+ @circuit_file)
+        
+        
+       
+         
 
-         data_uri = Base64.encode64(@Circuit.to_blob).gsub(/\n/, "") 
-         @image_tag = '<img alt="preview" src="data:image/png;base64,%s">' % data_uri
+         @data_uri = Base64.encode64(@Circuit.to_blob).gsub(/\n/, "") 
+         @image_tag = '<img alt="preview" src="data:image/png;base64,%s">' % @data_uri
        
      end 
 
