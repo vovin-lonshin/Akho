@@ -103,10 +103,15 @@ class CircuitsController < ApplicationController
    
 
        
-   def download
-     
-
-    send_data @Circuit.to_blob ,type: "image/png" , disposition: "attachment"
+   def download(data="file")
+     if params[:data].nil? || params[:data].empty?
+       circuit_data= data
+       params[:data]=circuit_data
+     else
+       circuit_data=  params[:data] 
+     end
+   
+    send_file circuit_data ,type: "image/png" , disposition: "attachment"
      
    end 
 
