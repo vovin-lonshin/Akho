@@ -1,0 +1,16 @@
+<% provide(:title, "Name Finder") %>
+
+<br>
+<div class="center">
+  <h1>Daemons<h1>
+  <h4><%= yield( :title) %><h4>
+  
+<%= form_tag({controller:"circuits",action: "form"},method:"get", class:"form-inline") do %>
+<%= submit_tag "GET [name]:", class: "btn" %>
+   
+   <%= text_area_tag(:desire, nil, placeholder: 'FROM: [Enter Declaration of Desire]',  class: "input-large", size: "24x6") %>
+<% end %>
+
+
+<br>
+</div>

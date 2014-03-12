@@ -40,12 +40,12 @@ class Daemon < ActiveRecord::Base
     end  
     
     if string==""
-      string="Great spirit of Akho I desire to do magick that I may fulfill my will"
+      string="Great daemon of AKHO, I Desire to create change through the power of my Belief, that I my fulfill my Will!"
     end 
       
     dd=string.split.join.upcase
     if num>dd.length
-      dd=dd.ljust(num,"IAO")
+      dd=dd.ljust(num,"AKHO")
     end  
     
     pad=dd.length
@@ -54,7 +54,7 @@ class Daemon < ActiveRecord::Base
     end
     
     dd=dd.ljust(pad,"IAO")
-    dd=dd.scan(/[A-Z]/).join
+    dd=dd.scan(/[A-Z]/).join.scan(/[^U^G]/).join
     dd=dd.split(//).shuffle
     dd=dd.in_groups(num)
 

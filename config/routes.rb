@@ -14,6 +14,7 @@ Akho::Application.routes.draw do
     match '/png', to: 'circuits#png', via: 'get'
     match '/circuit/random', to: 'circuits#random', via: 'get'
     match '/circuit-download', to: 'circuits#download', via: 'post'
+    match '/daemon', to: 'daemons#name', via: 'get'
     match '/signup', to: 'designers#new', via: 'get'
 
  

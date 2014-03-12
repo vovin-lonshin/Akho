@@ -9,10 +9,49 @@
             </li>
             </ul></h1>
             <ul class="nav nav-tabs pull-right">
-              <li><%= link_to "Home",    home_path %></li>
-              <li><%= link_to "Circuits",    circuit_path %></li>
-              <li><%= link_to "Help",    help_path %></li>
+           
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Site <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Home",    home_path %></li>
+                <li><%= link_to "Help",    help_path %></li>
+              </ul>
+             </li>
+             
+             
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Circuits <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><%= link_to "Workbench",    circuit_path %></li>
+              </ul>
+             </li>
+              
+             
+              <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                D&aelig;mons <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+              <li><%= link_to "Name Finder",    daemon_path %></li>
+              </ul>
+             </li>
+              
+     
+
+              
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Designer <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
               <li><%= link_to "Sign in", '#' %></li>
+              </ul>
+             </li>
+             
             </ul>
         </div>
 
