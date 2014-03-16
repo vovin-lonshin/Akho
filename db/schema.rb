@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312211908) do
+ActiveRecord::Schema.define(version: 20140316072600) do
 
   create_table "circiuts", force: true do |t|
     t.string   "url"
@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20140312211908) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.string   "remember_token"
   end
 
   add_index "designers", ["email"], name: "index_designers_on_email", unique: true
+  add_index "designers", ["remember_token"], name: "index_designers_on_remember_token"
 
 end

@@ -1,17 +1,16 @@
 <footer class="footer">
   <small>
-    [ {<%= link_to "AKHO",   '#' %>}
-    by {<%= link_to "Vovin Lonshin",   '#' %>} ]
+    [ {<%= link_to "AKHO",   'https://github.com/vovin-lonshin/Akho' %>}
+    by {<%= link_to Designer.find(1).name, Designer.find(1) %>} ]
   </small>
   
   <nav>
      <ul>
       <li>[<%= link_to "About",   about_path %>]</li>
       <li>[<%= link_to "Contact", contact_path %>]</li>
-      <li>[<a href="http://realmovkhaos.tumblr.com/post/59520102204/on-the-chaos-magick-sigil-trend">News</a>]</li>
+      <li>[<%= link_to "News", news_path %>]</li>
     </ul>
   </nav>
   <br>
-  [Build On]:::<br>
-<%= link_to image_tag("site/rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+
 </footer>
