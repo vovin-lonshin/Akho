@@ -26,5 +26,18 @@ module SessionsHelper
     cookies.delete(:remember_token)
     self.current_designer = nil
   end
+  
+  def current_designer?(designer)
+      designer == current_designer
+    end
    
+  def redirect_back_or(default)
+      redirect_to(session[:return_to] || default)
+      session.delete(:return_to)
+    end
+  
+    def store_location
+      session[:return_to] = request.url if request.get?
+    end
+    
 end

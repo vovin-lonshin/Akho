@@ -1,0 +1,8 @@
+<li>
+  <%= gravatar_for designer, size: 52 %>
+  <%= link_to designer.name, designer %>
+  <% if current_designer.admin? && !current_designer?(designer) %>
+    | <%= link_to "delete", designer, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>
