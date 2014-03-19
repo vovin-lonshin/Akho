@@ -3,6 +3,7 @@ Akho::Application.routes.draw do
   get "daemons/new"
   
   resources :sessions, only: [:new, :create, :destroy]
+  resources :bulletins, only: [:create, :destroy]
   resources :designers
   root  'static_pages#home'
   
@@ -21,6 +22,7 @@ Akho::Application.routes.draw do
     match '/signup', to: 'designers#new', via: 'get'
     match '/signin',  to: 'sessions#new',         via: 'get'
     match '/signout', to: 'sessions#destroy',     via: 'delete'
+    match '/bulletins', to: 'static_pages#create_bulletin', via: 'post'
 
  
   

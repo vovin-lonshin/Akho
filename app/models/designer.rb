@@ -3,6 +3,7 @@ class Designer < ActiveRecord::Base
   before_create :create_remember_token
   
   has_many :daemons
+  has_many :bulletins, dependent: :destroy
   
   validates :name, presence: true, length: { maximum: 51}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i

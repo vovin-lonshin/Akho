@@ -2,7 +2,20 @@
 
 <h1><%= yield(:title) %></h1>
 
-<p>
-<ul>
-<li> [3.14.14]:::{Reg. site - www.circuitmancer.com} </li>
-</ul>
+<div class="row">
+  <div class="span4">
+   <% if current_designer.admin? %>
+    <%= render 'shared/bulletin_form' %>
+  <% end %>
+  </div>
+  <div class="span8">
+    <% if @bulletins.any? %>
+     <div style="background-color: #CCCCCC">
+      <h3 style="color: #CC0000" >Bulletins <sup>{<%= @bulletins.count %>}</sup></h3>
+      </div>
+      <ul>
+        <%= render @bulletins %>
+      <%= will_paginate @bulletins %>
+    <% end %>
+  </div>
+</div>

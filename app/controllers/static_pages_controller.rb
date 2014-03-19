@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
    before_filter :set_cache_buster, only: [:home]
   
+  
   def home
     circuit_name="A circuit"
     get_rand_circuit(circuit_name)
@@ -15,8 +16,9 @@ class StaticPagesController < ApplicationController
   end
   
   def news
+    @bulletin = current_designer.bulletins.build if signed_in?
+    @bulletins = Bulletin.paginate(page: params[:page])
   end
-  
   
   
     def set_cache_buster
@@ -24,5 +26,6 @@ class StaticPagesController < ApplicationController
       response.headers["Pragma"] = "no-cache"
       response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
     end
+  
   
 end

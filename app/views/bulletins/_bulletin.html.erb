@@ -1,0 +1,8 @@
+<li>
+<%= l bulletin.created_at, :format => :bulletin %>:::{ <%= bulletin.content %> }
+<% if current_designer.admin? %>
+    | <%= link_to "delete", bulletin, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>
+

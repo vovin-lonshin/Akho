@@ -53,21 +53,6 @@ class DesignersController < ApplicationController
                                    :password_confirmation)
     end
     
-    def signed_in_designer
-        unless signed_in?
-            store_location
-            redirect_to signin_url, notice: "Please sign in."
-          end
-    end
-    
-
-  def correct_designer
-    @designer = Designer.find(params[:id])
-    redirect_to(root_url) unless current_designer?(@designer)
-  end
-  
-  def admin_designer
-       redirect_to(root_url) unless current_designer.admin?
-     end
+   
     
 end
