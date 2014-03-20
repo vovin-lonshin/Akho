@@ -1,22 +1,36 @@
+  <div class="row">
+  <% if signed_in? %>
+    <aside class="span4">
+      <section>
+        <%= render 'shared/designer_info' %>
+      </section>
+      <section>
+        <%= render 'shared/push_form' %>
+      </section>
+    </aside>
+    
+    <div class="span8">
+      <h3>Push Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+    <% else %>
+      <aside class="span4">
 
+    </aside>
+    <aside class="span8">
+      <section>
+       <div class="center hero-unit">
+    <h2>Welcome to the Akho Circuit App</h2>
 
+    </section>
+      <section>
+       <%= render partial: "circuits/random", locals: { random: @circuits } %>
+      </section>
+      <section>
+       <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+      </section>
+    </aside>
+   <% end %>
+  </div>
 
-
-<div class="center">
-  <h1>Akho</h1>
- 
-
-
-<%= render partial: "circuits/random", locals: { random: @circuits } %>
-
-<br>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
-
-
-
-
-
-
-
+  

@@ -4,6 +4,7 @@ class Designer < ActiveRecord::Base
   
   has_many :daemons
   has_many :bulletins, dependent: :destroy
+  has_many :pushes, as: :pushable, dependent: :destroy
   
   validates :name, presence: true, length: { maximum: 51}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(?:\.[a-z\d\-]+)*\.[a-z]+\z/i
@@ -20,6 +21,10 @@ end
 def Designer.hash(token)
   Digest::SHA1.hexdigest(token.to_s)
 end
+
+def feed
+   Push.where("pushable_id = ?", id)
+  end
 
 private
 

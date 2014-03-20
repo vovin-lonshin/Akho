@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317152906) do
+ActiveRecord::Schema.define(version: 20140320002220) do
 
   create_table "bulletins", force: true do |t|
     t.string   "content"
@@ -55,5 +55,15 @@ ActiveRecord::Schema.define(version: 20140317152906) do
 
   add_index "designers", ["email"], name: "index_designers_on_email", unique: true
   add_index "designers", ["remember_token"], name: "index_designers_on_remember_token"
+
+  create_table "pushes", force: true do |t|
+    t.string   "content"
+    t.integer  "pushable_id"
+    t.string   "pushable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pushes", ["pushable_type", "pushable_id", "created_at"], name: "pushes_on_pushable_by_created_at"
 
 end

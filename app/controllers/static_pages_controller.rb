@@ -6,6 +6,14 @@ class StaticPagesController < ApplicationController
     circuit_name="A circuit"
     get_rand_circuit(circuit_name)
     @circuit_title="[Random circuit]:::#{circuit_name}:::"
+   
+    if signed_in?
+         @pusher = "Designer"
+         @designer = current_designer 
+         @push = current_designer.pushes.build 
+         @feed_items = @designer.feed.paginate(page: params[:page])
+       end
+    
   end
 
   def help

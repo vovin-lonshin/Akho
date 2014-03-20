@@ -4,6 +4,7 @@ Akho::Application.routes.draw do
   
   resources :sessions, only: [:new, :create, :destroy]
   resources :bulletins, only: [:create, :destroy]
+  resources :pushes, only: [:create, :destroy]
   resources :designers
   root  'static_pages#home'
   

@@ -22,6 +22,7 @@ end
 
 class Daemon < ActiveRecord::Base
   belongs_to :desinger
+  has_many :pushes, as: :pushable, dependent: :destroy
   
   
   validates_with PhaseValidator

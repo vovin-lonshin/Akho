@@ -1,0 +1,11 @@
+ <div class="span8">
+    <% if @pusher.pushes.any? %>
+    <div style="background-color: #CCCCCC">
+      <h3 style="color: #CC0000" >Pushes  <sup>{<%= @pusher.pushes.count %>}</sup></h3>
+      </div>
+      <ol>
+        <%= render @pushes %>
+      </ol>
+      <%= will_paginate @pushes %>
+    <% end %>
+  </div>

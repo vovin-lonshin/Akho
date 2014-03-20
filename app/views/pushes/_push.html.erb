@@ -1,0 +1,13 @@
+<li>
+  
+  &raquo; <%= push.content %>
+  <sup>
+     &laquo; {<%= time_ago_in_words(push.created_at) %> ago}
+  </sup>
+<% if current_desinger = push.designer %>
+    | <%= link_to "delete", push, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: push.content %>
+  <% end %>
+  
+</li>

@@ -19,6 +19,8 @@ class DesignersController < ApplicationController
 
   def show
       @designer = Designer.find(params[:id])
+      @pusher = @designer
+      @pushes = @pusher.pushes.paginate(page: params[:page])
     end
     
   def create
@@ -45,6 +47,8 @@ class DesignersController < ApplicationController
       render 'edit'
     end
   end
+  
+ 
   
   private
 
